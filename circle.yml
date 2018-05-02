@@ -4,9 +4,9 @@ machine:
 
 dependencies:
     override:
-        - docker build -t civisanalytics/civis-services-shiny .
+        - docker build -t josiahparry/civis-image .
 
 test:
     override:
-      - docker run --entrypoint=/bin/bash civisanalytics/civis-services-shiny -c "echo BUILDS OK"
-      - docker run --entrypoint=/bin/bash civisanalytics/civis-services-shiny -c "Rscript -e \"library(shiny); q(save = 'no')\""
+      - docker run --entrypoint=/bin/bash josiahparry/civis-image -c "echo BUILDS OK"
+      - docker run --entrypoint=/bin/bash josiahparry/civis-image -c "Rscript -e \"library(shiny); q(save = 'no')\""
