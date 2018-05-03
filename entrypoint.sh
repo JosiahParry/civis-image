@@ -40,8 +40,8 @@ run_shiny_app() {
   export R_LIBS="${R_LIBS:-$LIB_DIR}"
   export GITHUB_PAT="${GITHUB_PAT:-$REPO_HTTP_TOKEN}"
 
-  ABSOLUTE_APP_DIR="$APP_DIR/$REPO_PATH_DIR/dashboard.Rmd”
-  exec R -e “rmarkdown::run(file = ‘$ABSOLUTE_APP_DIR’, shiny_args = list(port=3838, host=‘0.0.0.0’))”
+  ABSOLUTE_APP_DIR="$APP_DIR/$REPO_PATH_DIR/"
+  exec R -e "rmarkdown::run(file = '$ABSOLUTE_APP_DIR', shiny_args = list(port=3838, host='0.0.0.0'))"
 }
 
 main "$1"
