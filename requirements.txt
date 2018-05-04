@@ -7,3 +7,5 @@ lubridate
 stringr
 glue
 janitor
+scales
+emo
