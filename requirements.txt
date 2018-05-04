@@ -8,4 +8,4 @@ stringr
 glue
 janitor
 scales
-emo
+devtools
