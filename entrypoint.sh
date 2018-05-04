@@ -41,7 +41,7 @@ run_shiny_app() {
   export GITHUB_PAT="${GITHUB_PAT:-$REPO_HTTP_TOKEN}"
 
   cd "$APP_DIR/$REPO_PATH_DIR"
-  exec R -e "rmarkdown::run(shiny_args = list(port=3838, host='0.0.0.0', launch.browser=FALSE))"
+  exec R -e "rmarkdown::run(index.Rmd, shiny_args = list(port=3838, host='0.0.0.0', launch.browser=FALSE))"
 }
 
 main "$1"
