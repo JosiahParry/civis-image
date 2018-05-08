@@ -2,9 +2,6 @@ shiny
 flexdashboard
 DT
 googlesheets
-tidyverse
-lubridate
-stringr
 glue
 janitor
 scales
