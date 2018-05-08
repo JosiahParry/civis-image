@@ -7,6 +7,7 @@ COPY ./requirements.txt /requirements.txt
 RUN Rscript -e "packages <- readLines('/requirements.txt'); install.packages(packages)"
 RUN Rscript -e "devtools::install_github('tidyverse/tidyr')"
 RUN Rscript -e "devtools::install_github('tidyverse/forcats')"
+RUN Rscript -e "devtools::install_github('hadley/emo')"
 
 COPY ./app/app.r ./app/app.r
 COPY entrypoint.sh /
