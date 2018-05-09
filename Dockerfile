@@ -8,6 +8,7 @@ RUN Rscript -e "packages <- readLines('/requirements.txt'); install.packages(pac
 RUN Rscript -e "devtools::install_github('tidyverse/tidyr')"
 RUN Rscript -e "devtools::install_github('tidyverse/forcats')"
 RUN Rscript -e "devtools::install_github('hadley/emo')"
+RUN Rscript -e "devtools::install_github('rstudio/DT', ref = 'v0.4')"
 
 COPY ./app/app.r ./app/app.r
 COPY entrypoint.sh /
