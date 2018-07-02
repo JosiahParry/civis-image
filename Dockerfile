@@ -8,6 +8,7 @@ RUN Rscript -e "packages <- readLines('/requirements.txt'); install.packages(pac
 RUN Rscript -e "devtools::install_github('tidyverse/tidyr')"
 RUN Rscript -e "devtools::install_github('tidyverse/forcats')"
 RUN Rscript -e "devtools::install_github('hadley/emo')"
+RUN Rscript -e "devtools::install_github('jimhester/gmailr')"
 
 # DT requires >= v.1 of html widgets. Install latest commit fromt html widgets
 RUN Rscript -e "devtools::install_github('ramnathv/htmlwidgets')"
